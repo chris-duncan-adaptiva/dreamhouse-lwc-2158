@@ -32,6 +32,10 @@ echo "" && \
 
 echo "Opening org..." && \
 sfdx force:org:open -p lightning/n/Property_Explorer && \
+echo "" && \
+
+echo "RUNNING BAD COMMAND..." && \
+sf cmdt generate records --csv data/test.csv --type-name Test__mdt --name-column MasterLabel && \
 echo ""
 
 EXIT_CODE="$?"
